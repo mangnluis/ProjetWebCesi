@@ -13,11 +13,6 @@ body {
     font-size: 35px;
 }
 
-/* Header styles */
-.header {
-    margin: 0;
-    padding: 0;
-}
 
 .header_text {
     color: white;
@@ -89,4 +84,12 @@ a:hover {
 
   .section {
     text-decoration: underline;
+  }
+
+  .footer {
+    background-color: #8a7a97;
+    color: white;
+    text-align: center;
+    padding: 100px;
+    margin: 0;
   }
