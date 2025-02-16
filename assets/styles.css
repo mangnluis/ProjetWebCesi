@@ -11,7 +11,6 @@ body {
     font-family: "Italianno", serif;
     font-weight: 400;
     font-size: 35px;
-    font-style: normal;
 }
 
 /* Header styles */
@@ -86,4 +85,8 @@ a:hover {
     transform: scale(1.05);
     box-shadow: 13px 13px 100px #969696,
                -13px -13px 100px #ffffff;
+  }
+
+  .section {
+    text-decoration: underline;
   }
