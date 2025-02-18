@@ -1,0 +1,11 @@
+@import url('header/header.css');
+@import url('main/main.css');
+@import url('footer/footer.css');
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
