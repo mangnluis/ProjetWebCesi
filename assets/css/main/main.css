@@ -1,14 +1,11 @@
 @import url('offres.css');
+@import url('AlertesEtCandidatures.css');
 
 main{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 20px;
-}
-
-.AlertesEtCandidature {
-    margin: 20px;
 }
 
 .section {
