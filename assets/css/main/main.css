@@ -1,3 +1,26 @@
+@import url('offres.css');
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.OffreEtCandidature {
+    margin-left: 20px;
+}
+
 .section {
-    text-decoration: underline;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+.sectionTitle {
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(50, 50, 50);
   }
