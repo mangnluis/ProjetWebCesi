@@ -4,8 +4,8 @@
 
 .container {
     position: relative;
-    width: 500px;
-    height: 200px;
+    width: 45vw;
+    height: 20vh;
     background: white;
     border-radius: 10px;
     transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -22,8 +22,8 @@
 button {
  appearance: none;
  background-color: transparent;
- border: 0.125em solid #1A1A1A;
- border-radius: 0.9375em;
+ border: 0.125em solid #7400bd;
+ border-radius: 25px;
  box-sizing: border-box;
  color: #3B3B3B;
  cursor: pointer;
@@ -52,7 +52,7 @@ button:disabled {
 
 button:hover {
  color: #fff;
- background-color: #1A1A1A;
+ background-color: #7400bd;
  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
  transform: translateY(-2px);
 }
