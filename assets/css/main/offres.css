@@ -1,5 +1,9 @@
+.colonne{
+  display: flex;
+}
+
 .offres{
-    margin: 20px;
+    padding: min(5vw, 20px);
 }
 
 .offre {
