@@ -3,20 +3,21 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Remove duplicate justify-content */
-    padding: 10px;
+    justify-content: space-between;
     background-color: #8a7a97;
 }
+
 
 #logo {
     font-family: "Italianno", serif;
     font-weight: 400;
-    font-size: 35px;
+    font-size: 1.5rem;
 }
 
 .content{
     background: url(../../images/stage_accueil.png) no-repeat center center fixed;
     background-size: cover;
+    width: 100%;
     min-height: 50vh;
     color: white;
 }
@@ -33,5 +34,6 @@ a:hover {
 }
 
 .icone {
-    width: 50px;
+    width: 8vh;
+    min-width: 2vw;
 }

@@ -3,9 +3,7 @@
 
 main{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .section {
@@ -15,6 +13,7 @@ main{
   }
 
 .sectionTitle {
+    
     font-size: 2rem;
     font-weight: bolder;
     margin-bottom: 20px;

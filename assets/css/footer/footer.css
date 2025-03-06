@@ -2,8 +2,9 @@
     background-color: #8a7a97;
     color: white;
     margin-top: 20px;
-    gap: 200px;
+    gap: 5vw;
     display: flex;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     justify-content: space-around;
+    font-size: 0.5rem;
   }
