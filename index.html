@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/components/modal.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
+    <script src="assets/js/modal.js" defer></script>
 </head>
 <body>
     <header>
@@ -35,6 +37,33 @@
             </div>
         </div>
     </header>
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <h2>Connexion / Inscription</h2>
+            </div>
+            <div class="modal-body">
+                <div class="login-section">
+                    <h3>Se connecter</h3>
+                    <form class="login-form">
+                        <input type="email" placeholder="Email" required>
+                        <input type="password" placeholder="Mot de passe" required>
+                        <button type="submit">Se connecter</button>
+                    </form>
+                </div>
+                <div class="signup-section">
+                    <h3>S'inscrire</h3>
+                    <form class="signup-form">
+                        <input type="email" placeholder="Email" required>
+                        <input type="password" placeholder="Mot de passe" required>
+                        <input type="password" placeholder="Confirmer le mot de passe" required>
+                        <button type="submit">S'inscrire</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <main>
         <section class="offres">
             <h2 class="sectionTitle">Offres de récentes</h2>
