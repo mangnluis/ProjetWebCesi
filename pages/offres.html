@@ -3,17 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Your page description">
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <script src="../assets/js/modal.js" defer></script>
 </head>
 <body>
-<header class="header">
-    <img class="logo" src="assets/images/ToryamaPfp.jpg" alt="Logo">
-    <a href="../index.html">Accueil</a>
-    <a href="offres.html">Offres de stages</a>
-    <a href="entreprises.html">Entreprises</a>
-    <a href="connexion.html">Connexion</a>
-    <a href="login.html">S'inscrire</a>
-</header>
+    <header>
+        <nav class="header_text">
+            <a href="#" id="logo">TrouveTonStage</a>
+            <a href="../index.html">Accueil</a>
+            <a href="offres.html">Offres de stages</a>
+            <a href="entreprises.html">Entreprises</a>
+            <a href="login.html">S'inscrire</a>
+            <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd" />
+            </svg> 
+        </nav>
+    </header>
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <h2>Connexion</h2>
+            </div>
+            <div class="modal-body">
+                <div class="login-section">
+                    <h3>Se connecter</h3>
+                    <form class="login-form">
+                        <input type="email" placeholder="Email" required>
+                        <input type="password" placeholder="Mot de passe" required>
+                        <button type="submit">Se connecter</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
