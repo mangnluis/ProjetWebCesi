@@ -1,22 +1,56 @@
 @import url('offres.css');
 @import url('AlertesEtCandidatures.css');
+@import url('how-it-works.css');
+@import url('testimonials.css');
+@import url('entreprises.css');
+@import url('offre-details.css');
+@import url('auth.css');
+@import url('dashboard.css');
 
-main{
+main {
     display: flex;
     flex-wrap: wrap;
+    min-height: 50vh;
 }
 
 .section {
     display: flex;
     flex-direction: row;
     gap: 20px;
-  }
+    flex-wrap: wrap;
+}
 
 .sectionTitle {
-    
     font-size: 2rem;
     font-weight: bolder;
     margin-bottom: 20px;
     font-family: 'Roboto', sans-serif;
     color: rgb(50, 50, 50);
-  }
+}
+
+.see-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.see-more-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #7400bd;
+    color: white;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.see-more-btn:hover {
+    background-color: #5e0096;
+}
+
+@media screen and (max-width: 768px) {
+    .section {
+        flex-direction: column;
+    }
+}

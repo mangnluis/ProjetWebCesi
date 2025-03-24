@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tableau de bord Pilote - TrouveTonStage">
+    <title>Espace Pilote - TrouveTonStage</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+</head>
+<body class="dashboard-page">
+    <header class="dashboard-header">
+        <div class="logo-container">
+            <a href="../../index.html" id="logo">TrouveTonStage</a>
+        </div>
+        <div class="header-actions">
+            <div class="notifications-container">
+                <button class="notifications-toggle">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-indicator"></span>
+                </button>
+                <div class="notifications-menu">
+                    <div class="notifications-header">
+                        <h3>Notifications</h3>
+                        <button class="mark-all-read">Tout marquer comme lu</button>
+                    </div>
+                    <div class="notifications-list">
+                        <div class="notification-item unread">
+                            <div class="notification-icon">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="notification-content">
+                                <p><strong>Nouvelle candidature</strong> - Emma Martin a postulé chez DataCorp.</p>
+                                <span class="notification-time">Il y a 10 minutes</span>
+                            </div>
+                        </div>
+                        <div class="notification-item unread">
+                            <div class="notification-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="notification-content">
+                                <p><strong>Nouvelle offre</strong> - Une offre correspond aux compétences des étudiants.</p>
+                                <span class="notification-time">Il y a 2 heures</span>
+                            </div>
+                        </div>
+                        <div class="notification-item">
+                            <div class="notification-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="notification-content">
+                                <p><strong>Stage confirmé</strong> - Lucas Dupont a été accepté chez TechSolutions.</p>
+                                <span class="notification-time">Hier</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notifications-footer">
+                        <a href="notifications.html">Voir toutes les notifications</a>
+                    </div>
+                </div>
+            </div>
+            <div class="user-profile">
+                <img src="../../assets/images/pilote-avatar.png" alt="Photo de profil" class="profile-avatar">
+                <div class="user-info">
+                    <div class="user-name">Sophie Leroy</div>
+                    <div class="user-role">Pilote de promotion</div>
+                </div>
+                <div class="profile-dropdown">
+                    <a href="pilote-profile.html"><i class="fas fa-user"></i> Mon profil</a>
+                    <a href="pilote-settings.html"><i class="fas fa-cog"></i> Paramètres</a>
+                    <a href="../../index.html"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="dashboard-container">
+        <aside class="dashboard-sidebar">
+            <nav class="dashboard-nav">
+                <ul>
+                    <li class="nav-item active">
+                        <a href="pilote.html"><i class="fas fa-tachometer-alt"></i> Vue d'ensemble</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pilote-etudiants.html"><i class="fas fa-user-graduate"></i> Mes étudiants</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pilote-entreprises.html"><i class="fas fa-building"></i> Entreprises</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pilote-offres.html"><i class="fas fa-briefcase"></i> Offres de stage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pilote-stats.html"><i class="fas fa-chart-bar"></i> Statistiques</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pilote-settings.html"><i class="fas fa-cog"></i> Paramètres</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="dashboard-content">
+            <div class="content-header">
+                <h1>Tableau de bord pilote</h1>
+                <div class="header-actions">
+                    <select id="promotionSelect" class="promotion-select">
+                        <option value="all">Toutes les promotions</option>
+                        <option value="info2025" selected>Informatique 2025</option>
+                        <option value="info2026">Informatique 2026</option>
+                        <option value="marketing2025">Marketing 2025</option>
+                    </select>
+                    <div class="date-display">
+                        <i class="far fa-calendar-alt"></i>
+                        <span id="currentDate">11 Mars 2025</span>
+                    </div>
+                </div>
+            </div>
+            
+            <section class="stats-cards">
+                <div class="stat-card">
+                    <div class="stat-card-content">
+                        <h3>Étudiants</h3>
+                        <div class="stat-value">42</div>
+                        <div class="stat-detail">
+                            <span class="stat-label">Actifs:</span> 42/42
+                        </div>
+                    </div>
+                    <div class="stat-card-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card-content">
+                        <h3>En recherche</h3>
+                        <div class="stat-value">18</div>
+                        <div class="stat-detail">
+                            <span class="stat-label">Pourcentage:</span> 43%
+                        </div>
+                    </div>
+                    <div class="stat-card-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card-content">
+                        <h3>Stages confirmés</h3>
+                        <div class="stat-value">24</div>
+                        <div class="stat-detail">
+                            <span class="stat-label">Pourcentage:</span> 57%
+                        </div>
+                    </div>
+                    <div class="stat-card-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card-content">
+                        <h3>Candidatures</h3>
+                        <div class="stat-value">86</div>
+                        <div class="stat-detail">
+                            <span class="stat-label">Moy. par étudiant:</span> 2.0
+                        </div>
+                    </div>
+                    <div class="stat-card-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="dashboard-grid">
+                <section class="dashboard-panel student-progress">
+                    <div class="panel-header">
+                        <h2>Progression des étudiants</h2>
+                        <a href="pilote-etudiants.html" class="view-all">Voir tout</a>
+                    </div>
+                    <div class="panel-content">
+                        <div class="progress-container">
+                            <div class="progress-chart">
+                                <div class="chart-legend">
+                                    <div class="legend-item">
+                                        <span class="legend-color" style="background-color: #4CAF50;"></span>
+                                        <span class="legend-label">Stage confirmé</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <span class="legend-color" style="background-color: #FFC107;"></span>
+                                        <span class="legend-label">En attente de réponse</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <span class="legend-color" style="background-color: #2196F3;"></span>
+                                        <span class="legend-label">Recherche active</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <span class="legend-color" style="background-color: #F44336;"></span>
+                                        <span class="legend-label">Pas de recherche</span>
+                                    </div>
+                                </div>
+                                <div class="chart-content">
+                                    <div class="progress-bar">
+                                        <div class="progress-segment" style="width: 57%; background-color: #4CAF50;">57%</div>
+                                        <div class="progress-segment" style="width: 14%; background-color: #FFC107;">14%</div>
+                                        <div class="progress-segment" style="width: 24%; background-color: #2196F3;">24%</div>
+                                        <div class="progress-segment" style="width: 5%; background-color: #F44336;">5%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="student-progress-table">
+                                <thead>
+                                    <tr>
+                                        <th>Étudiant</th>
+                                        <th>Statut</th>
+                                        <th>Candidatures</th>
+                                        <th>Dernière activité</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Emma Martin</td>
+                                        <td><span class="status-badge confirmed">Stage confirmé</span></td>
+                                        <td>3</td>
+                                        <td>Aujourd'hui</td>
+                                        <td>
+                                            <button class="action-btn"><i class="fas fa-eye"></i></button>
+                                            <button class="action-btn"><i class="fas fa-envelope"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Thomas Dubois</td>
+                                        <td><span class="status-badge waiting">En attente</span></td>
+                                        <td>2</td>
+                                        <td>Hier</td>
+                                        <td>
+                                            <button class="action-btn"><i class="fas fa-eye"></i></button>
+                                            <button class="action-btn"><i class="fas fa-envelope"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Julie Moreau</td>
+                                        <td><span class="status-badge searching">Recherche</span></td>
+                                        <td>1</td>
+                                        <td>Il y a 3 jours</td>
+                                        <td>
+                                            <button class="action-btn"><i class="fas fa-eye"></i></button>
+                                            <button class="action-btn"><i class="fas fa-envelope"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nicolas Petit</td>
+                                        <td><span class="status-badge inactive">Pas de recherche</span></td>
+                                        <td>0</td>
+                                        <td>Il y a 1 semaine</td>
+                                        <td>
+                                            <button class="action-btn"><i class="fas fa-eye"></i></button>
+                                            <button class="action-btn"><i class="fas fa-envelope"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sophie Bernard</td>
+                                        <td><span class="status-badge confirmed">Stage confirmé</span></td>
+                                        <td>4</td>
+                                        <td>Hier</td>
+                                        <td>
+                                            <button class="action-btn"><i class="fas fa-eye"></i></button>
+                                            <button class="action-btn"><i class="fas fa-envelope"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="dashboard-panel recent-applications">
+                    <div class="panel-header">
+                        <h2>Candidatures récentes</h2>
+                        <a href="pilote-candidatures.html" class="view-all">Voir tout</a>
+                    </div>
+                    <div class="panel-content">
+                        <div class="applications-list">
+                            <div class="application-item">
+                                <div class="application-header">
+                                    <div class="student-info">
+                                        <span class="student-name">Emma Martin</span>
+                                        <span class="application-date">Aujourd'hui, 10:22</span>
+                                    </div>
+                                    <div class="application-status">
+                                        <span class="status-badge waiting">En attente</span>
+                                    </div>
+                                </div>
+                                <div class="application-details">
+                                    <div class="company-logo">
+                                        <img src="../../assets/images/datacorp-logo.png" alt="DataCorp">
+                                    </div>
+                                    <div class="offer-details">
+                                        <div class="offer-title">Data Analyst Junior</div>
+                                        <div class="company-name">DataCorp</div>
+                                        <div class="offer-location"><i class="fas fa-map-marker-alt"></i> Paris</div>
+                                    </div>
+                                </div>
+                                <div class="application-actions">
+                                    <button class="btn-view-application">Voir la candidature</button>
+                                </div>
+                            </div>
+                            
+                            <div class="application-item">
+                                <div class="application-header">
+                                    <div class="student-info">
+                                        <span class="student-name">Thomas Dubois</span>
+                                        <span class="application-date">Hier, 14:50</span>
+                                    </div>
+                                    <div class="application-status">
+                                        <span class="status-badge accepted">Acceptée</span>
+                                    </div>
+                                </div>
+                                <div class="application-details">
+                                    <div class="company-logo">
+                                        <img src="../../assets/images/techsolutions-logo.png" alt="TechSolutions">
+                                    </div>
+                                    <div class="offer-details">
+                                        <div class="offer-title">Développeur Front-End React</div>
+                                        <div class="company-name">TechSolutions</div>
+                                        <div class="offer-location"><i class="fas fa-map-marker-alt"></i> Paris</div>
+                                    </div>
+                                </div>
+                                <div class="application-actions">
+                                    <button class="btn-view-application">Voir la candidature</button>
+                                </div>
+                            </div>
+                            
+                            <div class="application-item">
+                                <div class="application-header">
+                                    <div class="student-info">
+                                        <span class="student-name">Julie Moreau</span>
+                                        <span class="application-date">Il y a 3 jours</span>
+                                    </div>
+                                    <div class="application-status">
+                                        <span class="status-badge rejected">Refusée</span>
+                                    </div>
+                                </div>
+                                <div class="application-details">
+                                    <div class="company-logo">
+                                        <img src="../../assets/images/webagency-logo.png" alt="WebAgency">
+                                    </div>
+                                    <div class="offer-details">
+                                        <div class="offer-title">UX/UI Designer</div>
+                                        <div class="company-name">WebAgency</div>
+                                        <div class="offer-location"><i class="fas fa-map-marker-alt"></i> Lyon</div>
+                                    </div>
+                                </div>
+                                <div class="application-actions">
+                                    <button class="btn-view-application">Voir la candidature</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="dashboard-panel company-insights">
+                    <div class="panel-header">
+                        <h2>Entreprises partenaires</h2>
+                        <a href="pilote-entreprises.html" class="view-all">Voir tout</a>
+                    </div>
+                    <div class="panel-content">
+                        <div class="top-companies">
+                            <div class="company-card">
+                                <div class="company-logo">
+                                    <img src="../../assets/images/techsolutions-logo.png" alt="TechSolutions">
+                                </div>
+                                <div class="company-info">
+                                    <div class="company-name">TechSolutions</div>
+                                    <div class="company-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        <span class="rating-value">4.0</span>
+                                    </div>
+                                </div>
+                                <div class="company-stats">
+                                    <div class="stat-item">
+                                        <div class="stat-value">5</div>
+                                        <div class="stat-label">Offres</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-value">8</div>
+                                        <div class="stat-label">Stagiaires</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="company-card">
+                                <div class="company-logo">
+                                    <img src="../../assets/images/datacorp-logo.png" alt="DataCorp">
+                                </div>
+                                <div class="company-info">
+                                    <div class="company-name">DataCorp</div>
+                                    <div class="company-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        <span class="rating-value">3.0</span>
+                                    </div>
+                                </div>
+                                <div class="company-stats">
+                                    <div class="stat-item">
+                                        <div class="stat-value">2</div>
+                                        <div class="stat-label">Offres</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-value">4</div>
+                                        <div class="stat-label">Stagiaires</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="company-card">
+                                <div class="company-logo">
+                                    <img src="../../assets/images/webagency-logo.png" alt="WebAgency">
+                                </div>
+                                <div class="company-info">
+                                    <div class="company-name">WebAgency</div>
+                                    <div class="company-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="rating-value">5.0</span>
+                                    </div>
+                                </div>
+                                <div class="company-stats">
+                                    <div class="stat-item">
+                                        <div class="stat-value">3</div>
+                                        <div class="stat-label">Offres</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-value">6</div>
+                                        <div class="stat-label">Stagiaires</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/dashboard.js"></script>
+    <script>
+        // Afficher la date actuelle
+        document.getElementById('currentDate').textContent = new Date().toLocaleDateString('fr-FR', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+        });
+        
+        // Changement de promotion
+        document.getElementById('promotionSelect').addEventListener('change', function() {
+            // Simulation de chargement des données de promotion
+            console.log('Chargement des données pour la promotion: ' + this.value);
+            // Ici vous pourriez faire une requête AJAX pour charger les données réelles
+        });
+    </script>
+</body>
+</html>

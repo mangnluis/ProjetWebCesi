@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tableau de bord Étudiant - TrouveTonStage">
+    <title>Espace Étudiant - TrouveTonStage</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+</head>
+<body class="dashboard-page">
+    <header class="dashboard-header">
+        <div class="logo-container">
+            <a href="../../index.html" id="logo">TrouveTonStage</a>
+        </div>
+        <div class="header-actions">
+            <div class="notifications-container">
+                <button class="notifications-toggle">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-indicator"></span>
+                </button>
+                <div class="notifications-menu">
+                    <div class="notifications-header">
+                        <h3>Notifications</h3>
+                        <button class="mark-all-read">Tout marquer comme lu</button>
+                    </div>
+                    <div class="notifications-list">
+                        <div class="notification-item unread">
+                            <div class="notification-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="notification-content">
+                                <p><strong>Nouvelle offre</strong> - Une offre correspond à votre profil.</p>
+                                <span class="notification-time">Il y a 30 minutes</span>
+                            </div>
+                        </div>
+                        <div class="notification-item unread">
+                            <div class="notification-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="notification-content">
+                                <p><strong>Réponse candidature</strong> - TechSolutions a répondu à votre candidature.</p>
+                                <span class="notification-time">Il y a 3 heures</span>
+                            </div>
+                        </div>
+                        <div class="notification-item">
+                            <div class="notification-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div class="notification-content">
+                                <p><strong>Rappel</strong> - Entretien prévu avec WebAgency demain à 14h.</p>
+                                <span class="notification-time">Hier</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notifications-footer">
+                        <a href="notifications.html">Voir toutes les notifications</a>
+                    </div>
+                </div>
+            </div>
+            <div class="user-profile">
+                <img src="../../assets/images/ToryamaPfp.jpg" alt="Photo de profil" class="profile-avatar">
+                <div class="user-info">
+                    <div class="user-name">Lucas Martin</div>
+                    <div class="user-role">Étudiant</div>
+                </div>
+                <div class="profile-dropdown">
+                    <a href="etudiant-profile.html"><i class="fas fa-user"></i> Mon profil</a>
+                    <a href="etudiant-settings.html"><i class="fas fa-cog"></i> Paramètres</a>
+                    <a href="../../index.html"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="dashboard-container">
+        <aside class="dashboard-sidebar">
+            <nav class="dashboard-nav">
+                <ul>
+                    <li class="nav-item active">
+                        <a href="etudiant.html"><i class="fas fa-tachometer-alt"></i> Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="etudiant-offres.html"><i class="fas fa-briefcase"></i> Offres</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="etudiant-candidatures.html"><i class="fas fa-file-alt"></i> Mes candidatures</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="etudiant-wishlist.html"><i class="fas fa-heart"></i> Favoris <span class="badge">4</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="etudiant-entreprises.html"><i class="fas fa-building"></i> Entreprises</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="etudiant-profile.html"><i class="fas fa-user"></i> Mon profil</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="dashboard-content">
+            <div class="content-header">
+                <h1>Bienvenue, Lucas!</h1>
+                <div class="header-actions">
+                    <div class="date-display">
+                        <i class="far fa-calendar-alt"></i>
+                        <span id="currentDate">11 Mars 2025</span>
+                    </div>
+                </div>
+            </div>
+            
+            <section class="status-overview">
+                <div class="status-card">
+                    <div class="status-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="status-content">
+                        <h2>Votre recherche de stage</h2>
+                        <div class="status-progress">
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" style="width: 65%;">65%</div>
+                            </div>
+                            <div class="progress-details">
+                                <span class="progress-label">En bonne voie</span>
+                                <span class="next-steps">Prochaine étape: Entretien avec TechSolutions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="stats-cards">
+                <div class="stat-card">
+                    <div class="stat-card-content">
+                        <h3>Candidatures</h3>
+                        <div class="stat-value">4</div>
+                        <div class="stat-detail">
+                            <span class="stat-status positive">En cours</span>
+                        </div>
+                    </div>
+                    <div class="stat-card-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card-content">
+                        <h3>Entretiens</h3>
+                        <div class="stat-value">2</div>
+                        <div class="stat-detail">
+                            <span class="stat-status positive">Programmés</span>
+                        </div>
+                    </div>
+                    <div class="stat-card-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card-content">
+                        <h3>Offres</h3>
+                        <div class="stat-value">1</div>
+                        <div class="stat-detail">
+                            <span class="stat-status positive">Reçue</span>
+                        </div>
+                    </div>
+                    <div class="stat-card-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card-content">
+                        <h3>Favoris</h3>
+                        <div class="stat-value">4</div>
+                        <div class="stat-detail">
+                            <span class="stat-status neutral">Enregistrés</span>
+                        </div>
+                    </div>
+                    <div class="stat-card-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="dashboard-grid">
+                <section class="dashboard-panel recent-applications">
+                    <div class="panel-header">
+                        <h2>Vos candidatures récentes</h2>
+                        <a href="etudiant-candidatures.html" class="view-all">Voir tout</a>
+                    </div>
+                    <div class="panel-content">
+                        <div class="applications-list">
+                            <div class="application-item">
+                                <div class="application-details">
+                                    <div class="company-logo">
+                                        <img src="../../assets/images/techsolutions-logo.png" alt="TechSolutions">
+                                    </div>
+                                    <div class="offer-details">
+                                        <div class="offer-title">Développeur Front-End React</div>
+                                        <div class="company-name">TechSolutions</div>
+                                        <div class="offer-location"><i class="fas fa-map-marker-alt"></i> Paris</div>
+                                    </div>
+                                </div>
+                                <div class="application-status">
+                                    <span class="status-badge interview">Entretien prévu</span>
+                                    <span class="application-date">Candidature envoyée il y a 3 jours</span>
+                                </div>
+                                <div class="application-actions">
+                                    <button class="btn-view-application">Voir détails</button>
+                                </div>
+                            </div>
+                            
+                            <div class="application-item">
+                                <div class="application-details">
+                                    <div class="company-logo">
+                                        <img src="../../assets/images/datacorp-logo.png" alt="DataCorp">
+                                    </div>
+                                    <div class="offer-details">
+                                        <div class="offer-title">Data Analyst Junior</div>
+                                        <div class="company-name">DataCorp</div>
+                                        <div class="offer-location"><i class="fas fa-map-marker-alt"></i> Paris</div>
+                                    </div>
+                                </div>
+                                <div class="application-status">
+                                    <span class="status-badge waiting">En attente</span>
+                                    <span class="application-date">Candidature envoyée il y a 1 semaine</span>
+                                </div>
+                                <div class="application-actions">
+                                    <button class="btn-view-application">Voir détails</button>
+                                </div>
+                            </div>
+                            
+                            <div class="application-item">
+                                <div class="application-details">
+                                    <div class="company-logo">
+                                        <img src="../../assets/images/webagency-logo.png" alt="WebAgency">
+                                    </div>
+                                    <div class="offer-details">
+                                        <div class="offer-title">Intégrateur Web HTML/CSS/JS</div>
+                                        <div class="company-name">WebAgency</div>
+                                        <div class="offer-location"><i class="fas fa-map-marker-alt"></i> Lyon</div>
+                                    </div>
+                                </div>
+                                <div class="application-status">
+                                    <span class="status-badge accepted">Offre reçue</span>
+                                    <span class="application-date">Candidature envoyée il y a 2 semaines</span>
+                                </div>
+                                <div class="application-actions">
+                                    <button class="btn-view-application">Voir détails</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="dashboard-panel recommended-offers">
+                    <div class="panel-header">
+                        <h2>Offres recommandées</h2>
+                        <a href="etudiant-offres.html" class="view-all">Voir tout</a>
+                    </div>
+                    <div class="panel-content">
+                        <div class="recommended-list">
+                            <div class="offer-card">
+                                <div class="offer-logo">
+                                    <img src="../../assets/images/startupinnov-logo.png" alt="StartupInnov">
+                                </div>
+                                <div class="offer-content">
+                                    <h3 class="offer-title">Développeur React Native</h3>
+                                    <div class="offer-company">StartupInnov</div>
+                                    <div class="offer-details">
+                                        <span class="offer-location"><i class="fas fa-map-marker-alt"></i> Nantes</span>
+                                        <span class="offer-duration"><i class="fas fa-calendar"></i> 6 mois</span>
+                                        <span class="offer-salary"><i class="fas fa-euro-sign"></i> 850€/mois</span>
+                                    </div>
+                                    <div class="offer-skills">
+                                        <span class="skill-tag">React Native</span>
+                                        <span class="skill-tag">JavaScript</span>
+                                    </div>
+                                    <div class="offer-match">
+                                        <div class="match-label">Correspondance avec votre profil</div>
+                                        <div class="match-percentage">
+                                            <div class="progress-bar-container">
+                                                <div class="progress-bar" style="width: 95%;">95%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="offer-actions">
+                                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                                        <a href="../offre-details.html?id=5" class="view-btn">Voir détails</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="offer-card">
+                                <div class="offer-logo">
+                                    <img src="../../assets/images/digitalcorp-logo.png" alt="DigitalCorp">
+                                </div>
+                                <div class="offer-content">
+                                    <h3 class="offer-title">Développeur Full-Stack JavaScript</h3>
+                                    <div class="offer-company">DigitalCorp</div>
+                                    <div class="offer-details">
+                                        <span class="offer-location"><i class="fas fa-map-marker-alt"></i> Marseille</span>
+                                        <span class="offer-duration"><i class="fas fa-calendar"></i> 6 mois</span>
+                                        <span class="offer-salary"><i class="fas fa-euro-sign"></i> 850€/mois</span>
+                                    </div>
+                                    <div class="offer-skills">
+                                        <span class="skill-tag">Node.js</span>
+                                        <span class="skill-tag">React</span>
+                                    </div>
+                                    <div class="offer-match">
+                                        <div class="match-label">Correspondance avec votre profil</div>
+                                        <div class="match-percentage">
+                                            <div class="progress-bar-container">
+                                                <div class="progress-bar" style="width: 85%;">85%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="offer-actions">
+                                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                                        <a href="../offre-details.html?id=4" class="view-btn">Voir détails</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="dashboard-panel upcoming-events">
+                    <div class="panel-header">
+                        <h2>Événements à venir</h2>
+                    </div>
+                    <div class="panel-content">
+                        <div class="events-list">
+                            <div class="event-item">
+                                <div class="event-date">
+                                    <div class="date-day">12</div>
+                                    <div class="date-month">MAR</div>
+                                </div>
+                                <div class="event-details">
+                                    <div class="event-title">Entretien avec TechSolutions</div>
+                                    <div class="event-time"><i class="fas fa-clock"></i> 14h00 - 15h00</div>
+                                    <div class="event-location"><i class="fas fa-map-marker-alt"></i> En ligne (Zoom)</div>
+                                </div>
+                                <div class="event-actions">
+                                    <button class="btn-event-details">Détails</button>
+                                </div>
+                            </div>
+                            
+                            <div class="event-item">
+                                <div class="event-date">
+                                    <div class="date-day">18</div>
+                                    <div class="date-month">MAR</div>
+                                </div>
+                                <div class="event-details">
+                                    <div class="event-title">Forum des entreprises tech</div>
+                                    <div class="event-time"><i class="fas fa-clock"></i> 09h00 - 17h00</div>
+                                    <div class="event-location"><i class="fas fa-map-marker-alt"></i> Campus universitaire</div>
+                                </div>
+                                <div class="event-actions">
+                                    <button class="btn-event-details">Détails</button>
+                                </div>
+                            </div>
+                            
+                            <div class="event-item">
+                                <div class="event-date">
+                                    <div class="date-day">24</div>
+                                    <div class="date-month">MAR</div>
+                                </div>
+                                <div class="event-details">
+                                    <div class="event-title">Atelier CV et lettre de motivation</div>
+                                    <div class="event-time"><i class="fas fa-clock"></i> 13h30 - 16h30</div>
+                                    <div class="event-location"><i class="fas fa-map-marker-alt"></i> Salle 302, Bâtiment A</div>
+                                </div>
+                                <div class="event-actions">
+                                    <button class="btn-event-details">Détails</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="dashboard-panel your-activity">
+                    <div class="panel-header">
+                        <h2>Votre activité récente</h2>
+                    </div>
+                    <div class="panel-content">
+                        <div class="activity-timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <div class="timeline-time">Aujourd'hui, 09:15</div>
+                                    <div class="timeline-title">Candidature envoyée</div>
+                                    <div class="timeline-description">Vous avez postulé pour le poste de <strong>Développeur Front-End React</strong> chez <strong>TechSolutions</strong>.</div>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-envelope-open-text"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <div class="timeline-time">Hier, 14:30</div>
+                                    <div class="timeline-title">Invitation à un entretien</div>
+                                    <div class="timeline-description">Vous avez reçu une invitation pour un entretien avec <strong>WebAgency</strong> pour le poste d'<strong>Intégrateur Web</strong>.</div>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <div class="timeline-time">Il y a 2 jours</div>
+                                    <div class="timeline-title">Offre ajoutée aux favoris</div>
+                                    <div class="timeline-description">Vous avez ajouté l'offre <strong>Data Analyst Junior</strong> de <strong>DataCorp</strong> à vos favoris.</div>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <div class="timeline-time">Il y a 3 jours</div>
+                                    <div class="timeline-title">Recherche d'offres</div>
+                                    <div class="timeline-description">Vous avez effectué une recherche pour des stages en <strong>développement web</strong> à <strong>Paris</strong>.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/dashboard.js"></script>
+    <script>
+        // Afficher la date actuelle
+        document.getElementById('currentDate').textContent = new Date().toLocaleDateString('fr-FR', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+        });
+        
+        // Gestion des boutons favoris
+        const wishlistButtons = document.querySelectorAll('.wishlist-btn');
+        wishlistButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const icon = this.querySelector('i');
+                
+                if (icon.classList.contains('far')) { // Si pas encore en favori
+                    icon.classList.remove('far');
+                    icon.classList.add('fas');
+                    // Ajouter à la liste des favoris (localStorage)
+                    showNotification('Offre ajoutée aux favoris', 'success');
+                } else { // Si déjà en favori
+                    icon.classList.remove('fas');
+                    icon.classList.add('far');
+                    // Retirer de la liste des favoris
+                    showNotification('Offre retirée des favoris', 'info');
+                }
+            });
+        });
+        
+        // Affichage d'une notification
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.className = 'notification ' + type;
+            notification.innerHTML = `
+                <div class="notification-content">
+                    <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-info-circle'}"></i>
+                    <span>${message}</span>
+                </div>
+                <button class="notification-close"><i class="fas fa-times"></i></button>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 10);
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    notification.remove();
+                }, 300);
+            }, 3000);
+            
+            notification.querySelector('.notification-close').addEventListener('click', () => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    notification.remove();
+                }, 300);
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Détails de l'offre de stage - TrouveTonStage">
+    <title>Détails de l'offre - TrouveTonStage</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="header_text">
+            <a href="../index.html" id="logo">TrouveTonStage</a>
+            <a href="../index.html">Accueil</a>
+            <a href="offres.html" class="active">Offres de stages</a>
+            <a href="entreprises.html">Entreprises</a>
+            <a href="login.html">S'inscrire</a>
+            <a href="connexion.html">Se connecter</a>
+            <button class="menu-toggle" id="menuToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </nav>
+    </header>
+    <main class="offre-details-page">
+        <div class="back-button">
+            <a href="offres.html"><i class="fas fa-arrow-left"></i> Retour aux offres</a>
+        </div>
+        
+        <div class="offre-header">
+            <div class="offre-company-logo">
+                <img src="../assets/images/techsolutions-logo.png" alt="Logo TechSolutions">
+            </div>
+            <div class="offre-header-content">
+                <h1>Développeur Front-End React</h1>
+                <div class="offre-company-name">
+                    <a href="entreprise-details.html?id=1">TechSolutions</a>
+                </div>
+                <div class="offre-details-list">
+                    <span class="detail-item"><i class="fas fa-map-marker-alt"></i> Paris</span>
+                    <span class="detail-item"><i class="fas fa-calendar"></i> 6 mois</span>
+                    <span class="detail-item"><i class="fas fa-euro-sign"></i> 800€/mois</span>
+                    <span class="detail-item"><i class="fas fa-clock"></i> Publié il y a 2 jours</span>
+                </div>
+                <div class="offre-actions">
+                    <button class="wishlist-btn"><i class="far fa-heart"></i> Ajouter aux favoris</button>
+                    <button class="apply-btn">Postuler maintenant</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="offre-content-container">
+            <div class="offre-main-content">
+                <section class="offre-section">
+                    <h2>Description du poste</h2>
+                    <p>TechSolutions recherche un développeur Front-End React passionné pour rejoindre notre équipe dynamique. Vous travaillerez sur des projets innovants dans un environnement stimulant.</p>
+                    
+                    <p>Vous serez chargé de développer des interfaces utilisateurs réactives et intuitives pour nos clients, en collaborant étroitement avec nos designers et développeurs back-end.</p>
+                </section>
+                
+                <section class="offre-section">
+                    <h2>Missions</h2>
+                    <ul>
+                        <li>Développer des interfaces utilisateurs modernes avec React</li>
+                        <li>Collaborer avec les designers UX/UI pour implémenter les maquettes</li>
+                        <li>Assurer la qualité du code et sa maintenabilité</li>
+                        <li>Participer aux revues de code et aux réunions d'équipe</li>
+                        <li>Optimiser les performances des applications</li>
+                    </ul>
+                </section>
+                
+                <section class="offre-section">
+                    <h2>Profil recherché</h2>
+                    <ul>
+                        <li>Formation en développement web ou informatique</li>
+                        <li>Connaissance approfondie de JavaScript, HTML et CSS</li>
+                        <li>Expérience avec React et Redux (ou équivalent)</li>
+                        <li>Sensibilité à l'UX/UI et au responsive design</li>
+                        <li>Esprit d'équipe et bonnes capacités de communication</li>
+                    </ul>
+                </section>
+                
+                <section class="offre-section">
+                    <h2>Compétences requises</h2>
+                    <div class="skills-container">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">Redux</span>
+                        <span class="skill-tag">Git</span>
+                    </div>
+                </section>
+            </div>
+            
+            <aside class="offre-sidebar">
+                <div class="company-info-card">
+                    <h3>À propos de l'entreprise</h3>
+                    <p>TechSolutions est une entreprise spécialisée dans le développement de solutions web innovantes pour les PME et grandes entreprises.</p>
+                    <a href="entreprise-details.html?id=1" class="company-link">Voir le profil</a>
+                </div>
+                
+                <div class="similar-offers-card">
+                    <h3>Offres similaires</h3>
+                    <div class="similar-offers-list">
+                        <a href="offre-details.html?id=2" class="similar-offer">
+                            <div class="similar-offer-title">Développeur Frontend Vue.js</div>
+                            <div class="similar-offer-company">WebAgency</div>
+                        </a>
+                        <a href="offre-details.html?id=3" class="similar-offer">
+                            <div class="similar-offer-title">Développeur React Junior</div>
+                            <div class="similar-offer-company">StartupInnov</div>
+                        </a>
+                        <a href="offre-details.html?id=4" class="similar-offer">
+                            <div class="similar-offer-title">Intégrateur Web HTML/CSS/JS</div>
+                            <div class="similar-offer-company">DigitalCorp</div>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        
+        <div id="applyModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Postuler à cette offre</h2>
+                <form id="applicationForm">
+                    <div class="form-group">
+                        <label for="cv">CV (PDF, max 5MB)</label>
+                        <input type="file" id="cv" name="cv" accept=".pdf" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="motivationLetter">Lettre de motivation</label>
+                        <textarea id="motivationLetter" name="motivationLetter" rows="8" placeholder="Décrivez pourquoi vous êtes intéressé par ce poste et quelles sont vos motivations..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-application">Envoyer ma candidature</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-section">
+            <h3>TrouveTonStage</h3>
+            <p>La plateforme qui connecte les étudiants aux meilleures opportunités de stage.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Liens rapides</h3>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="offres.html">Offres de stages</a></li>
+                <li><a href="entreprises.html">Entreprises</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Informations légales</h3>
+            <ul>
+                <li><a href="contact.html">Nous contacter</a></li>
+                <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
+                <li><a href="mentions-legales.html">Mentions légales</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Suivez-nous</h3>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/offres.js"></script>
+</body>
+</html>

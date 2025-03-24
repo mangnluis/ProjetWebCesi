@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tableau de bord Administrateur - TrouveTonStage">
+    <title>Tableau de bord Administrateur - TrouveTonStage</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+</head>
+<body class="dashboard-page">
+    <header class="dashboard-header">
+        <div class="logo-container">
+            <a href="../../index.html" id="logo">TrouveTonStage</a>
+        </div>
+        <div class="header-actions">
+            <div class="notifications-container">
+                <button class="notifications-toggle">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-indicator"></span>
+                </button>
+                <div class="notifications-menu">
+                    <div class="notifications-header">
+                        <h3>Notifications</h3>
+                        <button class="mark-all-read">Tout marquer comme lu</button>
+                    </div>
+                    <div class="notifications-list">
+                        <div class="notification-item unread">
+                            <div class="notification-icon">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <div class="notification-content">
+                                <p><strong>Nouveau compte</strong> - L'étudiant Jean Dupont s'est inscrit.</p>
+                                <span class="notification-time">Il y a 5 minutes</span>
+                            </div>
+                        </div>
+                        <div class="notification-item unread">
+                            <div class="notification-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="notification-content">
+                                <p><strong>Nouvelle entreprise</strong> - TechInnovate a été ajoutée dans le système.</p>
+                                <span class="notification-time">Il y a 1 heure</span>
+                            </div>
+                        </div>
+                        <div class="notification-item">
+                            <div class="notification-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="notification-content">
+                                <p><strong>Alerte système</strong> - Une mise à jour importante est disponible.</p>
+                                <span class="notification-time">Hier</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notifications-footer">
+                        <a href="notifications.html">Voir toutes les notifications</a>
+                    </div>
+                </div>
+            </div>
+            <div class="user-profile">
+                <img src="../../assets/images/admin-avatar.png" alt="Photo de profil" class="profile-avatar">
+                <div class="user-info">
+                    <div class="user-name">Admin Système</div>
+                    <div class="user-role">Administrateur</div>
+                </div>
+                <div class="profile-dropdown">
+                    <a href="admin-profile.html"><i class="fas fa-user"></i> Mon profil</a>
+                    <a href="admin-settings.html"><i class="fas fa-cog"></i> Paramètres</a>
+                    <a href="../../index.html"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="dashboard-container">
+        <aside class="dashboard-sidebar">
+            <nav class="dashboard-nav">
+                <ul>
+                    <li class="nav-item active">
+                        <a href="admin.html"><i class="fas fa-tachometer-alt"></i> Vue d'ensemble</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="admin-users.html"><i class="fas fa-users"></i> Gestion utilisateurs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="admin-entreprises.html"><i class="fas fa-building"></i> Entreprises</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="admin-offres.html"><i class="fas fa-briefcase"></i> Offres de stage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="admin-stats.html"><i class="fas fa-chart-bar"></i> Statistiques</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="admin-settings.html"><i class="fas fa-cog"></i> Paramètres</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="dashboard-content">
+            <div class="content-header">
+                <h1>Tableau de bord administrateur</h1>
+                <div class="header-actions">
+                    <div class="date-display">
+                        <i class="far fa-calendar-alt"></i>
+                        <span id="currentDate">11 Mars 2025</span>
+                    </div>
+                </div>
+            </div>
+            
+            <section class="stats-cards">
+                <div class="stat-card">
+                    <div class="stat-card-content">
+                        <h3>Utilisateurs</h3>
+                        <div class="stat-value">542</div>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> +12% ce mois
+                        </div>
+                    </div>
+                    <div class="stat-card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card-content">
+                        <h3>Entreprises</h3>
+                        <div class="stat-value">128</div>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> +5% ce mois
+                        </div>
+                    </div>
+                    <div class="stat-card-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card-content">
+                        <h3>Offres actives</h3>
+                        <div class="stat-value">86</div>
+                        <div class="stat-change negative">
+                            <i class="fas fa-arrow-down"></i> -3% ce mois
+                        </div>
+                    </div>
+                    <div class="stat-card-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card-content">
+                        <h3>Candidatures</h3>
+                        <div class="stat-value">312</div>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> +18% ce mois
+                        </div>
+                    </div>
+                    <div class="stat-card-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="dashboard-grid">
+                <section class="recent-users dashboard-panel">
+                    <div class="panel-header">
+                        <h2>Utilisateurs récents</h2>
+                        <a href="admin-users.html" class="view-all">Voir tout</a>
+                    </div>
+                    <div class="panel-content">
+                        <div class="user-list">
+                            <div class="user-item">
+                                <div class="user-avatar">
+                                    <img src="../../assets/images/user1.png" alt="Avatar de l'utilisateur">
+                                </div>
+                                <div class="user-info">
+                                    <div class="user-name">Marie Dubois</div>
+                                    <div class="user-email">marie.dubois@example.com</div>
+                                </div>
+                                <div class="user-role student">Étudiant</div>
+                                <div class="user-status">
+                                    <span class="status-badge active">Actif</span>
+                                </div>
+                            </div>
+                            
+                            <div class="user-item">
+                                <div class="user-avatar">
+                                    <img src="../../assets/images/user2.png" alt="Avatar de l'utilisateur">
+                                </div>
+                                <div class="user-info">
+                                    <div class="user-name">Thomas Martin</div>
+                                    <div class="user-email">thomas.martin@example.com</div>
+                                </div>
+                                <div class="user-role pilot">Pilote</div>
+                                <div class="user-status">
+                                    <span class="status-badge active">Actif</span>
+                                </div>
+                            </div>
+                            
+                            <div class="user-item">
+                                <div class="user-avatar">
+                                    <img src="../../assets/images/user3.png" alt="Avatar de l'utilisateur">
+                                </div>
+                                <div class="user-info">
+                                    <div class="user-name">Sophie Bernard</div>
+                                    <div class="user-email">sophie.bernard@example.com</div>
+                                </div>
+                                <div class="user-role student">Étudiant</div>
+                                <div class="user-status">
+                                    <span class="status-badge inactive">Inactif</span>
+                                </div>
+                            </div>
+                            
+                            <div class="user-item">
+                                <div class="user-avatar">
+                                    <img src="../../assets/images/user4.png" alt="Avatar de l'utilisateur">
+                                </div>
+                                <div class="user-info">
+                                    <div class="user-name">Lucas Petit</div>
+                                    <div class="user-email">lucas.petit@example.com</div>
+                                </div>
+                                <div class="user-role student">Étudiant</div>
+                                <div class="user-status">
+                                    <span class="status-badge active">Actif</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="recent-offers dashboard-panel">
+                    <div class="panel-header">
+                        <h2>Offres récentes</h2>
+                        <a href="admin-offres.html" class="view-all">Voir tout</a>
+                    </div>
+                    <div class="panel-content">
+                        <div class="offer-list">
+                            <div class="offer-item">
+                                <div class="offer-logo">
+                                    <img src="../../assets/images/techsolutions-logo.png" alt="Logo entreprise">
+                                </div>
+                                <div class="offer-details">
+                                    <div class="offer-title">Développeur Front-End React</div>
+                                    <div class="offer-company">TechSolutions</div>
+                                </div>
+                                <div class="offer-date">
+                                    <span>Ajoutée il y a 2 jours</span>
+                                </div>
+                                <div class="offer-status">
+                                    <span class="status-badge active">Active</span>
+                                </div>
+                            </div>
+                            
+                            <div class="offer-item">
+                                <div class="offer-logo">
+                                    <img src="../../assets/images/datacorp-logo.png" alt="Logo entreprise">
+                                </div>
+                                <div class="offer-details">
+                                    <div class="offer-title">Data Analyst Junior</div>
+                                    <div class="offer-company">DataCorp</div>
+                                </div>
+                                <div class="offer-date">
+                                    <span>Ajoutée il y a 3 jours</span>
+                                </div>
+                                <div class="offer-status">
+                                    <span class="status-badge active">Active</span>
+                                </div>
+                            </div>
+                            
+                            <div class="offer-item">
+                                <div class="offer-logo">
+                                    <img src="../../assets/images/webagency-logo.png" alt="Logo entreprise">
+                                </div>
+                                <div class="offer-details">
+                                    <div class="offer-title">Intégrateur Web HTML/CSS/JS</div>
+                                    <div class="offer-company">WebAgency</div>
+                                </div>
+                                <div class="offer-date">
+                                    <span>Ajoutée il y a 5 jours</span>
+                                </div>
+                                <div class="offer-status">
+                                    <span class="status-badge inactive">Inactive</span>
+                                </div>
+                            </div>
+                            
+                            <div class="offer-item">
+                                <div class="offer-logo">
+                                    <img src="../../assets/images/marketingpro-logo.png" alt="Logo entreprise">
+                                </div>
+                                <div class="offer-details">
+                                    <div class="offer-title">Assistant Marketing Digital</div>
+                                    <div class="offer-company">MarketingPro</div>
+                                </div>
+                                <div class="offer-date">
+                                    <span>Ajoutée il y a 1 semaine</span>
+                                </div>
+                                <div class="offer-status">
+                                    <span class="status-badge active">Active</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="recent-activities dashboard-panel">
+                    <div class="panel-header">
+                        <h2>Activités récentes</h2>
+                    </div>
+                    <div class="panel-content">
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-user-plus"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <div class="activity-text">
+                                        <strong>Marie Dubois</strong> s'est inscrite.
+                                    </div>
+                                    <div class="activity-time">Il y a 5 heures</div>
+                                </div>
+                            </div>
+                            
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <div class="activity-text">
+                                        <strong>TechSolutions</strong> a publié une nouvelle offre.
+                                    </div>
+                                    <div class="activity-time">Il y a 8 heures</div>
+                                </div>
+                            </div>
+                            
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <div class="activity-text">
+                                        <strong>DataCorp</strong> a mis à jour son profil.
+                                    </div>
+                                    <div class="activity-time">Il y a 1 jour</div>
+                                </div>
+                            </div>
+                            
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <div class="activity-text">
+                                        <strong>Lucas Petit</strong> a postulé à une offre.
+                                    </div>
+                                    <div class="activity-time">Il y a 2 jours</div>
+                                </div>
+                            </div>
+                            
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <div class="activity-text">
+                                        <strong>Sophie Bernard</strong> a évalué <strong>WebAgency</strong>.
+                                    </div>
+                                    <div class="activity-time">Il y a 3 jours</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="system-stats dashboard-panel">
+                    <div class="panel-header">
+                        <h2>Répartition des offres</h2>
+                    </div>
+                    <div class="panel-content">
+                        <div class="chart-container">
+                            <div class="chart-header">
+                                <h3>Par compétence</h3>
+                            </div>
+                            <div class="chart skill-distribution">
+                                <div class="skill-bar">
+                                    <div class="skill-name">Développement Web</div>
+                                    <div class="skill-progress-wrapper">
+                                        <div class="skill-progress" style="width: 45%">45%</div>
+                                    </div>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-name">Data Science</div>
+                                    <div class="skill-progress-wrapper">
+                                        <div class="skill-progress" style="width: 20%">20%</div>
+                                    </div>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-name">Marketing Digital</div>
+                                    <div class="skill-progress-wrapper">
+                                        <div class="skill-progress" style="width: 15%">15%</div>
+                                    </div>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-name">UI/UX Design</div>
+                                    <div class="skill-progress-wrapper">
+                                        <div class="skill-progress" style="width: 12%">12%</div>
+                                    </div>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-name">Développement Mobile</div>
+                                    <div class="skill-progress-wrapper">
+                                        <div class="skill-progress" style="width: 8%">8%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/dashboard.js"></script>
+    <script>
+        // Afficher la date actuelle
+        document.getElementById('currentDate').textContent = new Date().toLocaleDateString('fr-FR', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+        });
+        
+        // Simulation de rafraîchissement des données en temps réel
+        setInterval(function() {
+            // Ceci serait normalement une requête AJAX pour récupérer les nouvelles données
+            console.log('Mise à jour des données en temps réel...');
+        }, 60000); // Toutes les minutes
+    </script>
+</body>
+</html>

@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TrouveTonStage - La plateforme qui connecte les étudiants aux meilleures opportunités de stage">
+    <meta name="keywords" content="stage, étudiant, entreprise, recrutement, alternance">
+    <title>TrouveTonStage - Trouvez le stage qui vous correspond</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
-    <script src="assets/js/modal.js" defer></script>
 </head>
 <body>
     <header>
@@ -17,74 +20,169 @@
             <a href="pages/offres.html">Offres de stages</a>
             <a href="pages/entreprises.html">Entreprises</a>
             <a href="pages/login.html">S'inscrire</a>
-            <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd" />
-            </svg> 
+            <a href="pages/connexion.html">Se connecter</a>
+            <button class="menu-toggle" id="menuToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </nav>
         <div class="content">
-            <br>
             <div>
                 <h1 class="title">Trouvez le stage qui vous correspond</h1>
                 <form class="input">
                     <input class="search" type="search" placeholder="Rechercher un stage">
+                    <button type="submit"><i class="fas fa-search"></i></button>
                 </form>
-                <br>
                 <form class="input">
-                    <input class="search2" type="week">
-                    <input class="search2" type="geolocation">
+                    <input class="search2" type="date" placeholder="À partir de">
+                    <input class="search2" type="text" placeholder="Ville ou région">
                 </form>
             </div>
         </div>
     </header>
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="modal-header">
-                <h2>Connexion</h2>
-            </div>
-            <div class="modal-body">
-                <div class="login-section">
-                    <h3>Se connecter</h3>
-                    <form class="login-form">
-                        <input type="email" placeholder="Email" required>
-                        <input type="password" placeholder="Mot de passe" required>
-                        <button type="submit">Se connecter</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
     <main>
         <section class="offres">
-            <h2 class="sectionTitle">Offres de récentes</h2>
+            <h2 class="sectionTitle">Offres récentes</h2>
             <div class="section">
                 <div class="offre">
-                    Un
+                    <div class="offre-logo">
+                        <img src="assets/images/techsolutions-logo.png" alt="Logo entreprise">
+                    </div>
+                    <div class="offre-content">
+                        <h3 class="offre-title">Développeur Front-End React</h3>
+                        <div class="offre-company">TechSolutions</div>
+                        <div class="offre-details">
+                            <span class="offre-location"><i class="fas fa-map-marker-alt"></i> Paris</span>
+                            <span class="offre-duration"><i class="fas fa-calendar"></i> 6 mois</span>
+                        </div>
+                        <div class="offre-skills">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                        <div class="offre-actions">
+                            <a href="pages/offre-details.html?id=1" class="view-btn">Voir détails</a>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="offre">
-                    Deux
+                    <div class="offre-logo">
+                        <img src="assets/images/datacorp-logo.png" alt="Logo entreprise">
+                    </div>
+                    <div class="offre-content">
+                        <h3 class="offre-title">Data Analyst Junior</h3>
+                        <div class="offre-company">DataCorp</div>
+                        <div class="offre-details">
+                            <span class="offre-location"><i class="fas fa-map-marker-alt"></i> Lyon</span>
+                            <span class="offre-duration"><i class="fas fa-calendar"></i> 4 mois</span>
+                        </div>
+                        <div class="offre-skills">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">SQL</span>
+                        </div>
+                        <div class="offre-actions">
+                            <a href="pages/offre-details.html?id=2" class="view-btn">Voir détails</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="see-more-container">
+                <a href="pages/offres.html" class="see-more-btn">Voir toutes les offres</a>
+            </div>
+        </section>
+        
+        <section class="how-it-works">
+            <h2 class="sectionTitle">Comment ça marche</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-icon">1</div>
+                    <h3>Inscrivez-vous</h3>
+                    <p>Créez votre compte et complétez votre profil avec vos compétences.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">2</div>
+                    <h3>Recherchez</h3>
+                    <p>Parcourez les offres et filtrez selon vos critères.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">3</div>
+                    <h3>Postulez</h3>
+                    <p>Envoyez votre candidature directement via la plateforme.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">4</div>
+                    <h3>Suivez</h3>
+                    <p>Suivez l'état de vos candidatures depuis votre tableau de bord.</p>
                 </div>
             </div>
         </section>
+        
         <div class="AlertesEtCandidature">
             <section class="container">
                 <section class="contenu">
-                <h2 class="sectionTitle">Vos candidatures</h2>
-                <button>Voir mes candidatures</button>
+                    <h2 class="sectionTitle">Vos candidatures</h2>
+                    <p>Suivez l'état de vos candidatures et consultez l'historique de vos postulations.</p>
+                    <button onclick="window.location.href='pages/connexion.html'">Voir mes candidatures</button>
                 </section>
             </section>
             <section class="container">
                 <section class="contenu">
-                <h2 class="sectionTitle">Vos alertes</h2>
+                    <h2 class="sectionTitle">Vos alertes</h2>
+                    <p>Créez des alertes pour recevoir les nouvelles offres qui correspondent à votre profil.</p>
+                    <button onclick="window.location.href='pages/connexion.html'">Configurer mes alertes</button>
                 </section>
             </section>
         </div>
+        
+        <section class="testimonials">
+            <h2 class="sectionTitle">Ce qu'ils en disent</h2>
+            <div class="testimonials-container">
+                <div class="testimonial">
+                    <div class="quote">"J'ai trouvé mon stage en développement web en moins d'une semaine grâce à TrouveTonStage!"</div>
+                    <div class="author">Léa M., étudiante en informatique</div>
+                </div>
+                <div class="testimonial">
+                    <div class="quote">"Une plateforme intuitive qui m'a permis de trouver des candidats qualifiés rapidement."</div>
+                    <div class="author">Marc D., recruteur chez TechSolutions</div>
+                </div>
+                <div class="testimonial">
+                    <div class="quote">"Le suivi des candidatures est un vrai plus pour accompagner nos étudiants."</div>
+                    <div class="author">Sophie L., pilote de formation</div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="footer">
-        <a>Nous Contacter</a>
-        <a>Politique de confidentialité</a>
-        <a>Mentions Légales</a>
+        <div class="footer-section">
+            <h3>TrouveTonStage</h3>
+            <p>La plateforme qui connecte les étudiants aux meilleures opportunités de stage.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Liens rapides</h3>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="pages/offres.html">Offres de stages</a></li>
+                <li><a href="pages/entreprises.html">Entreprises</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Informations légales</h3>
+            <ul>
+                <li><a href="pages/contact.html">Nous contacter</a></li>
+                <li><a href="pages/politique-confidentialite.html">Politique de confidentialité</a></li>
+                <li><a href="pages/mentions-legales.html">Mentions légales</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Suivez-nous</h3>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
     </footer>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

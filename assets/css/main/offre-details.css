@@ -1,0 +1,265 @@
+/* Page détails offre */
+.offre-details-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 5%;
+}
+
+.back-button {
+    margin-bottom: 2rem;
+}
+
+.back-button a {
+    display: inline-flex;
+    align-items: center;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.back-button a:hover {
+    color: #7400bd;
+}
+
+.back-button i {
+    margin-right: 0.5rem;
+}
+
+.offre-header {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.offre-company-logo {
+    flex: 0 0 120px;
+    margin-right: 2rem;
+}
+
+.offre-company-logo img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.offre-header-content {
+    flex: 1;
+}
+
+.offre-header-content h1 {
+    margin: 0 0 0.5rem;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.offre-company-name {
+    margin-bottom: 1rem;
+}
+
+.offre-company-name a {
+    color: #7400bd;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.offre-company-name a:hover {
+    text-decoration: underline;
+}
+
+.offre-details-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    color: #666;
+}
+
+.detail-item i {
+    margin-right: 0.5rem;
+    color: #7400bd;
+}
+
+.offre-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.wishlist-btn, .apply-btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.wishlist-btn {
+    background-color: white;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.wishlist-btn:hover {
+    background-color: #f8f8f8;
+    border-color: #ccc;
+}
+
+.apply-btn {
+    background-color: #7400bd;
+    color: white;
+    border: none;
+}
+
+.apply-btn:hover {
+    background-color: #5e0096;
+}
+
+.offre-content-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.offre-main-content {
+    flex: 1;
+}
+
+.offre-section {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.offre-section h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    color: #333;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.offre-section h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #7400bd;
+}
+
+.offre-section ul {
+    padding-left: 1.5rem;
+}
+
+.offre-section li {
+    margin-bottom: 0.5rem;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.skill-tag {
+    background-color: #f0e6f7;
+    color: #7400bd;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+}
+
+.offre-sidebar {
+    flex: 0 0 300px;
+}
+
+.company-info-card, .similar-offers-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.company-info-card h3, .similar-offers-card h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.company-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #7400bd;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.company-link:hover {
+    text-decoration: underline;
+}
+
+.similar-offers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.similar-offer {
+    display: block;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.similar-offer:hover {
+    background-color: #f0e6f7;
+    transform: translateX(5px);
+}
+
+.similar-offer-title {
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.similar-offer-company {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+@media screen and (max-width: 768px) {
+    .offre-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .offre-company-logo {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+    }
+    
+    .offre-content-container {
+        flex-direction: column;
+    }
+    
+    .offre-sidebar {
+        width: 100%;
+    }
+}
+
+

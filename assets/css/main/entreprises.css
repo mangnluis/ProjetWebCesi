@@ -1,0 +1,157 @@
+/* Page entreprises */
+.entreprises-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 5%;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.search-container {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.search-container input {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+}
+
+.search-container button {
+    padding: 1rem 1.5rem;
+    background-color: #7400bd;
+    color: white;
+    border: none;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+}
+
+.entreprises-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.entreprise-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.entreprise-card:hover {
+    transform: translateY(-5px);
+}
+
+.entreprise-logo {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f8f8;
+    padding: 1.5rem;
+}
+
+.entreprise-logo img {
+    max-height: 80px;
+    max-width: 80%;
+}
+
+.entreprise-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.entreprise-name {
+    margin: 0 0 0.8rem;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.entreprise-location {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.entreprise-location i {
+    margin-right: 0.5rem;
+    color: #7400bd;
+}
+
+.entreprise-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.stars {
+    color: #ffc107;
+    margin-right: 0.5rem;
+}
+
+.rating-count {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.entreprise-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tag {
+    background-color: #f0e6f7;
+    color: #7400bd;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.entreprise-offers {
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.view-company-btn {
+    display: inline-block;
+    background-color: #7400bd;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+}
+
+.view-company-btn:hover {
+    background-color: #5e0096;
+}

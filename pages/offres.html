@@ -1,44 +1,282 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez toutes nos offres de stage - TrouveTonStage">
+    <meta name="keywords" content="offres stage, stage étudiant, recherche stage">
+    <title>Offres de Stage - TrouveTonStage</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
-    <script src="../assets/js/modal.js" defer></script>
 </head>
 <body>
     <header>
         <nav class="header_text">
-            <a href="#" id="logo">TrouveTonStage</a>
+            <a href="../index.html" id="logo">TrouveTonStage</a>
             <a href="../index.html">Accueil</a>
-            <a href="offres.html">Offres de stages</a>
+            <a href="offres.html" class="active">Offres de stages</a>
             <a href="entreprises.html">Entreprises</a>
             <a href="login.html">S'inscrire</a>
-            <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd" />
-            </svg> 
+            <a href="connexion.html">Se connecter</a>
+            <button class="menu-toggle" id="menuToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </nav>
     </header>
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="modal-header">
-                <h2>Connexion</h2>
-            </div>
-            <div class="modal-body">
-                <div class="login-section">
-                    <h3>Se connecter</h3>
-                    <form class="login-form">
-                        <input type="email" placeholder="Email" required>
-                        <input type="password" placeholder="Mot de passe" required>
-                        <button type="submit">Se connecter</button>
-                    </form>
+    <main class="offres-page">
+        <aside class="filters-sidebar">
+            <h2>Filtres</h2>
+            <form id="filterForm">
+                <div class="filter-group">
+                    <h3>Compétences</h3>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="skill" value="web"> Développement Web</label>
+                        <label><input type="checkbox" name="skill" value="mobile"> Développement Mobile</label>
+                        <label><input type="checkbox" name="skill" value="data"> Data Science</label>
+                        <label><input type="checkbox" name="skill" value="design"> UI/UX Design</label>
+                        <label><input type="checkbox" name="skill" value="marketing"> Marketing Digital</label>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3>Durée</h3>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="duration" value="1-2"> 1-2 mois</label>
+                        <label><input type="checkbox" name="duration" value="3-4"> 3-4 mois</label>
+                        <label><input type="checkbox" name="duration" value="5-6"> 5-6 mois</label>
+                        <label><input type="checkbox" name="duration" value="6+"> Plus de 6 mois</label>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3>Rémunération</h3>
+                    <div class="range-slider">
+                        <input type="range" min="0" max="2000" value="600" class="slider" id="salaryRange">
+                        <div class="range-value"><span id="salaryValue">600</span>€ minimum</div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="filter-button">Appliquer les filtres</button>
+                <button type="reset" class="reset-button">Réinitialiser</button>
+            </form>
+        </aside>
+        
+        <section class="offres-list">
+            <div class="list-controls">
+                <div class="search-bar">
+                    <input type="text" placeholder="Rechercher un stage..." id="offresSearch">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="view-toggle">
+                    <button class="toggle-button active" data-view="grid"><i class="fas fa-th"></i></button>
+                    <button class="toggle-button" data-view="list"><i class="fas fa-list"></i></button>
+                </div>
+                <div class="sort-control">
+                    <select id="sortSelect">
+                        <option value="date-desc">Plus récentes</option>
+                        <option value="date-asc">Plus anciennes</option>
+                        <option value="salary-desc">Mieux rémunérées</option>
+                        <option value="salary-asc">Moins rémunérées</option>
+                    </select>
                 </div>
             </div>
+            
+            <div class="offres-grid" id="offresContainer">
+                <!-- Répéter pour chaque offre -->
+                <div class="offre-card">
+                    <div class="offre-logo">
+                        <img src="../assets/images/techsolutions-logo.png" alt="Logo entreprise">
+                    </div>
+                    <div class="offre-content">
+                        <h3 class="offre-title">Développeur Front-End React</h3>
+                        <div class="offre-company">TechSolutions</div>
+                        <div class="offre-details">
+                            <span class="offre-location"><i class="fas fa-map-marker-alt"></i> Paris</span>
+                            <span class="offre-duration"><i class="fas fa-calendar"></i> 6 mois</span>
+                            <span class="offre-salary"><i class="fas fa-euro-sign"></i> 800€/mois</span>
+                        </div>
+                        <div class="offre-skills">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">CSS</span>
+                        </div>
+                        <div class="offre-actions">
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                            <a href="offre-details.html?id=1" class="view-btn">Voir détails</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="offre-card">
+                    <div class="offre-logo">
+                        <img src="../assets/images/webagency-logo.png" alt="Logo entreprise">
+                    </div>
+                    <div class="offre-content">
+                        <h3 class="offre-title">Intégrateur Web HTML/CSS/JS</h3>
+                        <div class="offre-company">WebAgency</div>
+                        <div class="offre-details">
+                            <span class="offre-location"><i class="fas fa-map-marker-alt"></i> Lyon</span>
+                            <span class="offre-duration"><i class="fas fa-calendar"></i> 4 mois</span>
+                            <span class="offre-salary"><i class="fas fa-euro-sign"></i> 700€/mois</span>
+                        </div>
+                        <div class="offre-skills">
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                        <div class="offre-actions">
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                            <a href="offre-details.html?id=2" class="view-btn">Voir détails</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="offre-card">
+                    <div class="offre-logo">
+                        <img src="../assets/images/datacorp-logo.png" alt="Logo entreprise">
+                    </div>
+                    <div class="offre-content">
+                        <h3 class="offre-title">Data Analyst Junior</h3>
+                        <div class="offre-company">DataCorp</div>
+                        <div class="offre-details">
+                            <span class="offre-location"><i class="fas fa-map-marker-alt"></i> Paris</span>
+                            <span class="offre-duration"><i class="fas fa-calendar"></i> 4 mois</span>
+                            <span class="offre-salary"><i class="fas fa-euro-sign"></i> 900€/mois</span>
+                        </div>
+                        <div class="offre-skills">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Data Viz</span>
+                        </div>
+                        <div class="offre-actions">
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                            <a href="offre-details.html?id=3" class="view-btn">Voir détails</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="offre-card">
+                    <div class="offre-logo">
+                        <img src="../assets/images/digitalcorp-logo.png" alt="Logo entreprise">
+                    </div>
+                    <div class="offre-content">
+                        <h3 class="offre-title">Développeur Full-Stack JavaScript</h3>
+                        <div class="offre-company">DigitalCorp</div>
+                        <div class="offre-details">
+                            <span class="offre-location"><i class="fas fa-map-marker-alt"></i> Marseille</span>
+                            <span class="offre-duration"><i class="fas fa-calendar"></i> 6 mois</span>
+                            <span class="offre-salary"><i class="fas fa-euro-sign"></i> 850€/mois</span>
+                        </div>
+                        <div class="offre-skills">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">MongoDB</span>
+                        </div>
+                        <div class="offre-actions">
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                            <a href="offre-details.html?id=4" class="view-btn">Voir détails</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="offre-card">
+                    <div class="offre-logo">
+                        <img src="../assets/images/startupinnov-logo.png" alt="Logo entreprise">
+                    </div>
+                    <div class="offre-content">
+                        <h3 class="offre-title">Développeur React Native</h3>
+                        <div class="offre-company">StartupInnov</div>
+                        <div class="offre-details">
+                            <span class="offre-location"><i class="fas fa-map-marker-alt"></i> Nantes</span>
+                            <span class="offre-duration"><i class="fas fa-calendar"></i> 5 mois</span>
+                            <span class="offre-salary"><i class="fas fa-euro-sign"></i> 850€/mois</span>
+                        </div>
+                        <div class="offre-skills">
+                            <span class="skill-tag">React Native</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Mobile</span>
+                        </div>
+                        <div class="offre-actions">
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                            <a href="offre-details.html?id=5" class="view-btn">Voir détails</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="offre-card">
+                    <div class="offre-logo">
+                        <img src="../assets/images/marketingpro-logo.png" alt="Logo entreprise">
+                    </div>
+                    <div class="offre-content">
+                        <h3 class="offre-title">Assistant Marketing Digital</h3>
+                        <div class="offre-company">MarketingPro</div>
+                        <div class="offre-details">
+                            <span class="offre-location"><i class="fas fa-map-marker-alt"></i> Paris</span>
+                            <span class="offre-duration"><i class="fas fa-calendar"></i> 3 mois</span>
+                            <span class="offre-salary"><i class="fas fa-euro-sign"></i> 650€/mois</span>
+                        </div>
+                        <div class="offre-skills">
+                            <span class="skill-tag">SEO</span>
+                            <span class="skill-tag">Réseaux sociaux</span>
+                            <span class="skill-tag">Analytics</span>
+                        </div>
+                        <div class="offre-actions">
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                            <a href="offre-details.html?id=6" class="view-btn">Voir détails</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pagination">
+                <button class="pagination-btn prev-btn" disabled><i class="fas fa-chevron-left"></i></button>
+                <div class="pagination-numbers">
+                    <button class="pagination-number active">1</button>
+                    <button class="pagination-number">2</button>
+                    <button class="pagination-number">3</button>
+                    <span class="pagination-ellipsis">...</span>
+                    <button class="pagination-number">10</button>
+                </div>
+                <button class="pagination-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-section">
+            <h3>TrouveTonStage</h3>
+            <p>La plateforme qui connecte les étudiants aux meilleures opportunités de stage.</p>
         </div>
-    </div>
+        <div class="footer-section">
+            <h3>Liens rapides</h3>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="offres.html">Offres de stages</a></li>
+                <li><a href="entreprises.html">Entreprises</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Informations légales</h3>
+            <ul>
+                <li><a href="contact.html">Nous contacter</a></li>
+                <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
+                <li><a href="mentions-legales.html">Mentions légales</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Suivez-nous</h3>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/offres.js"></script>
 </body>
 </html>

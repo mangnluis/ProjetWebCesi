@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez les entreprises qui recrutent - TrouveTonStage">
+    <title>Entreprises - TrouveTonStage</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="header_text">
+            <a href="../index.html" id="logo">TrouveTonStage</a>
+            <a href="../index.html">Accueil</a>
+            <a href="offres.html">Offres de stages</a>
+            <a href="entreprises.html" class="active">Entreprises</a>
+            <a href="login.html">S'inscrire</a>
+            <a href="connexion.html">Se connecter</a>
+            <button class="menu-toggle" id="menuToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </nav>
+    </header>
+    <main class="entreprises-page">
+        <section class="page-header">
+            <h1>Découvrez les entreprises qui recrutent</h1>
+            <p>Explorez notre base d'entreprises partenaires et trouvez celle qui vous correspond.</p>
+            <div class="search-container">
+                <input type="text" id="entrepriseSearch" placeholder="Rechercher une entreprise...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </section>
+        
+        <section class="entreprises-grid">
+            <div class="entreprise-card">
+                <div class="entreprise-logo">
+                    <img src="../assets/images/techsolutions-logo.png" alt="Logo TechSolutions">
+                </div>
+                <div class="entreprise-content">
+                    <h2 class="entreprise-name">TechSolutions</h2>
+                    <div class="entreprise-location"><i class="fas fa-map-marker-alt"></i> Paris</div>
+                    <div class="entreprise-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="rating-count">(12 avis)</div>
+                    </div>
+                    <div class="entreprise-tags">
+                        <span class="tag">Informatique</span>
+                        <span class="tag">Web</span>
+                        <span class="tag">Innovation</span>
+                    </div>
+                    <div class="entreprise-offers">5 offres de stage disponibles</div>
+                    <a href="entreprise-details.html?id=1" class="view-company-btn">Voir l'entreprise</a>
+                </div>
+            </div>
+            
+            <div class="entreprise-card">
+                <div class="entreprise-logo">
+                    <img src="../assets/images/webagency-logo.png" alt="Logo WebAgency">
+                </div>
+                <div class="entreprise-content">
+                    <h2 class="entreprise-name">WebAgency</h2>
+                    <div class="entreprise-location"><i class="fas fa-map-marker-alt"></i> Lyon</div>
+                    <div class="entreprise-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="rating-count">(8 avis)</div>
+                    </div>
+                    <div class="entreprise-tags">
+                        <span class="tag">Web</span>
+                        <span class="tag">Design</span>
+                        <span class="tag">UX/UI</span>
+                    </div>
+                    <div class="entreprise-offers">3 offres de stage disponibles</div>
+                    <a href="entreprise-details.html?id=2" class="view-company-btn">Voir l'entreprise</a>
+                </div>
+            </div>
+            
+            <div class="entreprise-card">
+                <div class="entreprise-logo">
+                    <img src="../assets/images/datacorp-logo.png" alt="Logo DataCorp">
+                </div>
+                <div class="entreprise-content">
+                    <h2 class="entreprise-name">DataCorp</h2>
+                    <div class="entreprise-location"><i class="fas fa-map-marker-alt"></i> Paris</div>
+                    <div class="entreprise-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="rating-count">(6 avis)</div>
+                    </div>
+                    <div class="entreprise-tags">
+                        <span class="tag">Data Science</span>
+                        <span class="tag">IA</span>
+                        <span class="tag">Big Data</span>
+                    </div>
+                    <div class="entreprise-offers">2 offres de stage disponibles</div>
+                    <a href="entreprise-details.html?id=3" class="view-company-btn">Voir l'entreprise</a>
+                </div>
+            </div>
+            
+            <div class="entreprise-card">
+                <div class="entreprise-logo">
+                    <img src="../assets/images/digitalcorp-logo.png" alt="Logo DigitalCorp">
+                </div>
+                <div class="entreprise-content">
+                    <h2 class="entreprise-name">DigitalCorp</h2>
+                    <div class="entreprise-location"><i class="fas fa-map-marker-alt"></i> Marseille</div>
+                    <div class="entreprise-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="rating-count">(9 avis)</div>
+                    </div>
+                    <div class="entreprise-tags">
+                        <span class="tag">Développement</span>
+                        <span class="tag">Mobile</span>
+                        <span class="tag">Cloud</span>
+                    </div>
+                    <div class="entreprise-offers">4 offres de stage disponibles</div>
+                    <a href="entreprise-details.html?id=4" class="view-company-btn">Voir l'entreprise</a>
+                </div>
+            </div>
+            
+            <div class="entreprise-card">
+                <div class="entreprise-logo">
+                    <img src="../assets/images/startupinnov-logo.png" alt="Logo StartupInnov">
+                </div>
+                <div class="entreprise-content">
+                    <h2 class="entreprise-name">StartupInnov</h2>
+                    <div class="entreprise-location"><i class="fas fa-map-marker-alt"></i> Nantes</div>
+                    <div class="entreprise-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="rating-count">(4 avis)</div>
+                    </div>
+                    <div class="entreprise-tags">
+                        <span class="tag">Startup</span>
+                        <span class="tag">Innovation</span>
+                        <span class="tag">Mobile</span>
+                    </div>
+                    <div class="entreprise-offers">2 offres de stage disponibles</div>
+                    <a href="entreprise-details.html?id=5" class="view-company-btn">Voir l'entreprise</a>
+                </div>
+            </div>
+            
+            <div class="entreprise-card">
+                <div class="entreprise-logo">
+                    <img src="../assets/images/marketingpro-logo.png" alt="Logo MarketingPro">
+                </div>
+                <div class="entreprise-content">
+                    <h2 class="entreprise-name">MarketingPro</h2>
+                    <div class="entreprise-location"><i class="fas fa-map-marker-alt"></i> Paris</div>
+                    <div class="entreprise-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="rating-count">(7 avis)</div>
+                    </div>
+                    <div class="entreprise-tags">
+                        <span class="tag">Marketing</span>
+                        <span class="tag">Digital</span>
+                        <span class="tag">Communication</span>
+                    </div>
+                    <div class="entreprise-offers">3 offres de stage disponibles</div>
+                    <a href="entreprise-details.html?id=6" class="view-company-btn">Voir l'entreprise</a>
+                </div>
+            </div>
+        </section>
+        
+        <div class="pagination">
+            <button class="pagination-btn prev-btn" disabled><i class="fas fa-chevron-left"></i></button>
+            <div class="pagination-numbers">
+                <button class="pagination-number active">1</button>
+                <button class="pagination-number">2</button>
+                <button class="pagination-number">3</button>
+                <span class="pagination-ellipsis">...</span>
+                <button class="pagination-number">8</button>
+            </div>
+            <button class="pagination-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-section">
+            <h3>TrouveTonStage</h3>
+            <p>La plateforme qui connecte les étudiants aux meilleures opportunités de stage.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Liens rapides</h3>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="offres.html">Offres de stages</a></li>
+                <li><a href="entreprises.html">Entreprises</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Informations légales</h3>
+            <ul>
+                <li><a href="contact.html">Nous contacter</a></li>
+                <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
+                <li><a href="mentions-legales.html">Mentions légales</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Suivez-nous</h3>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/entreprises.js"></script>
+</body>
+</html>

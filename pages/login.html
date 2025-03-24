@@ -1,44 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Inscription - TrouveTonStage">
+    <title>Créer un compte - TrouveTonStage</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
-    <script src="../assets/js/modal.js" defer></script>
 </head>
 <body>
     <header>
         <nav class="header_text">
-            <a href="#" id="logo">TrouveTonStage</a>
+            <a href="../index.html" id="logo">TrouveTonStage</a>
             <a href="../index.html">Accueil</a>
             <a href="offres.html">Offres de stages</a>
             <a href="entreprises.html">Entreprises</a>
-            <a href="login.html">S'inscrire</a>
-            <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd" />
-            </svg> 
+            <a href="login.html" class="active">S'inscrire</a>
+            <a href="connexion.html">Se connecter</a>
+            <button class="menu-toggle" id="menuToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </nav>
     </header>
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="modal-header">
-                <h2>Connexion</h2>
+    <main class="auth-page">
+        <div class="auth-container">
+            <div class="auth-header">
+                <h1>Créer un compte</h1>
+                <p>Rejoignez TrouveTonStage pour découvrir les meilleures opportunités.</p>
             </div>
-            <div class="modal-body">
-                <div class="login-section">
-                    <h3>Se connecter</h3>
-                    <form class="login-form">
-                        <input type="email" placeholder="Email" required>
-                        <input type="password" placeholder="Mot de passe" required>
-                        <button type="submit">Se connecter</button>
-                    </form>
+            
+            <form id="registerForm" class="auth-form">
+                <div class="form-group">
+                    <label for="userType">Je suis</label>
+                    <div class="user-type-selector">
+                        <div class="user-type-option">
+                            <input type="radio" id="student" name="userType" value="student" checked>
+                            <label for="student">
+                                <i class="fas fa-user-graduate"></i>
+                                <span>Étudiant</span>
+                            </label>
+                        </div>
+                        <div class="user-type-option">
+                            <input type="radio" id="company" name="userType" value="company">
+                            <label for="company">
+                                <i class="fas fa-building"></i>
+                                <span>Entreprise</span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">Prénom</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="firstName" name="firstName" placeholder="Votre prénom" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lastName">Nom</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="lastName" name="lastName" placeholder="Votre nom" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" name="email" placeholder="Votre adresse email" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" name="password" placeholder="Créez un mot de passe sécurisé" required>
+                    </div>
+                    <div class="password-strength" id="passwordStrength">
+                        <div class="strength-bar">
+                            <div class="strength-progress" id="strengthProgress"></div>
+                        </div>
+                        <div class="strength-text" id="strengthText">Force du mot de passe</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirmer le mot de passe</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirmez votre mot de passe" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">J'accepte les <a href="terms.html">conditions d'utilisation</a> et la <a href="privacy.html">politique de confidentialité</a>.</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="auth-button">Créer mon compte</button>
+            </form>
+
+            <div class="auth-footer">
+                <p>Vous avez déjà un compte ? <a href="connexion.html">Connectez-vous</a></p>
             </div>
         </div>
-    </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-section">
+            <h3>TrouveTonStage</h3>
+            <p>La plateforme qui connecte les étudiants aux meilleures opportunités de stage.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Liens rapides</h3>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="offres.html">Offres de stages</a></li>
+                <li><a href="entreprises.html">Entreprises</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Informations légales</h3>
+            <ul>
+                <li><a href="contact.html">Nous contacter</a></li>
+                <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
+                <li><a href="mentions-legales.html">Mentions légales</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Suivez-nous</h3>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/auth.js"></script>
 </body>
 </html>
